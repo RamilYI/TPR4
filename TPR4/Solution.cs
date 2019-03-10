@@ -76,25 +76,25 @@ namespace TPR4
             tab2.Dock = DockStyle.Fill;
             tabPage1.Controls.Add(tab1);
             tabPage2.Controls.Add(tab2);
-            dataGridView228.RowCount = array.Length+1;
-            dataGridView228.ColumnCount = array.Length+1;
-            HolyHandGrenade.borderdata(dataGridView228);
+            dataGridViewOne.RowCount = array.Length+1;
+            dataGridViewOne.ColumnCount = array.Length+1;
+            HolyHandGrenade.borderdata(dataGridViewOne);
             Pi = step3();
             for (int i = 0; i < array.Length; i++)
                 for (int j = 0; j < array.Length; j++)
-                    dataGridView228.Rows[i].Cells[j].Value = Pi[i, j];
+                    dataGridViewOne.Rows[i].Cells[j].Value = Pi[i, j];
             string[] range = step4();
-            dataGridView1488.RowCount = range.Length;
-            dataGridView1488.ColumnCount = 1;
-            HolyHandGrenade.borderdata(dataGridView1488);
+            dataGridViewTwo.RowCount = range.Length;
+            dataGridViewTwo.ColumnCount = 1;
+            HolyHandGrenade.borderdata(dataGridViewTwo);
             for (int i = 0; i < range.Length; i++)
                 for (int j = 0; j < 1; j++)
-                    dataGridView1488.Rows[i].Cells[j].Value = range[i];
+                    dataGridViewTwo.Rows[i].Cells[j].Value = range[i];
 
-            for (int i = 0; i < array.Length; i++) dataGridView228.Rows[array.Length].Cells[i].Value = Fminus[i];
-            dataGridView228.Rows[array.Length].HeaderCell.Value = "F-";
-            for (int i = 0; i < array.Length; i++) dataGridView228.Rows[i].Cells[array.Length].Value = Fplus[i];
-            dataGridView228.Columns[array.Length].HeaderText = "F+";
+            for (int i = 0; i < array.Length; i++) dataGridViewOne.Rows[array.Length].Cells[i].Value = Fminus[i];
+            dataGridViewOne.Rows[array.Length].HeaderCell.Value = "F-";
+            for (int i = 0; i < array.Length; i++) dataGridViewOne.Rows[i].Cells[array.Length].Value = Fplus[i];
+            dataGridViewOne.Columns[array.Length].HeaderText = "F+";
             chartMake();
         }
 
